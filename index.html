@@ -137,19 +137,18 @@
 <h4>Input Variables:</h4>
 <div>
     <div class="div-a">
-        <div><label>Position: </label><input placeholder="Window direction (1, 2, 3, or 4" type="text" id="input11" maxlength="10"></div> 
-        <div><label>Width: </label><input placeholder="Window width" type="text" id="input12" maxlength="10"></div> 
-        <div> <label>Height: </label><input placeholder="Window height" type="text" id="input13" maxlength="10"> </div>
-        <div><label>Bottom: </label><input placeholder="Window still height" type="text" id="input14" maxlength="10"></div>
-        <div><label>Tsol: </label><input placeholder="Window transmittance" type="text" id="input15" maxlength="10"></div>
-    
+        <div><label>Position: </label><input placeholder="Window direction" type="text" id="input1" maxlength="10"> 0 for North; 1 for East; 2 for South; 3 for West.</div> 
+	<div><label>Width (m): </label><input placeholder="Window width" type="text" id="input2" maxlength="10"></div> 
+	<div> <label>Height (m): </label><input placeholder="Window height" type="text" id="input3" maxlength="10"> </div>
+	<div><label>Bottom (m): </label><input placeholder="Window sill height" type="text" id="input4" maxlength="10"> The gap between the window botton and the floor.</div>
+	<div><label>Tsol: </label><input placeholder="Window transmittance" type="text" id="input5" maxlength="10">Input a value between 0 and 1</div>
       </div>
     <div class="div-b">
       
-    <div><label>Rfloor: </label><input placeholder="Floor reflection ratio" type="text" id="input16" maxlength="10"></div>
+    <div><label>Rfloor: </label><input placeholder="Floor reflection ratio" type="text" id="input16" maxlength="10"> 0~1. Input 0.2 if you don't know the specific value.</div>
     <div><label>Hour: </label><input placeholder="The ith hour of a year" type="text" id="input17" maxlength="10"></div>
-    <div><label>Body Direction: </label><input placeholder="Body direction" type="text" id="input18" maxlength="10"></div>
-    <div><label>Clothing Absorptivity: </label><input  placeholder="Clothing absorptivity" type="text" id="input19" maxlength="10"></div>
+    <div><label>Front Body Direction: </label><input placeholder="Body direction" type="text" id="input18" maxlength="10"> 0 for North; 90 for East; 180 for South; 270 for West.</div>
+    <div><label>Clothing Absorptivity: </label><input  placeholder="Clothing absorptivity" type="text" id="input19" maxlength="10"> 0~1. Input 0.67 if you don't know the specific value.</div>
 </div>
 
 
@@ -191,7 +190,7 @@
     <!-- footer -->
     <footer class="footer">
       <div class="container-fluid">
-        <p>Source code is available under an MIT license on <a href="https://github.com/mdahlhausen/epwvis" rel="link">Github</a>.  Please provide <a href="https://github.com/mdahlhausen/epwvis/issues" rel="link">feedback, report issues, and request graphs you would like to see here</a>.</p>
+        <p>Source code is available under a license on <a href="https://github.com/YingdongHe/HNU_Solar-tool_page2" rel="link">Github</a>.</p>
       </div>
     </footer> <!-- footer -->
 </div> <!-- end page elements-->
@@ -224,7 +223,7 @@
 
 
   function updateCharts(epw,unitSystem) {
-    console.log("drawing charts in " + unitSystem + " units");
+    //console.log("drawing charts in " + unitSystem + " units");
     clearEPWCharts();
     $("#epwChartDiv").show();
 
