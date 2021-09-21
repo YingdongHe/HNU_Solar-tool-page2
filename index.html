@@ -239,13 +239,13 @@
       var field18 = document.getElementById("input18").value;
       var field19 = document.getElementById("input19").value;
 
-      var result = Mode2(parseFloat(field17), parseFloat(field11),parseFloat(field12),parseFloat(field13),parseFloat(field14),parseFloat(field15),parseFloat(field16),parseFloat(field18),parseFloat(field19),epw.diffuseHorizontalRadiation, epw.directNormalRadiation, epw);
+      var result = Mode2(parseFloat(field17), parseFloat(field11),parseFloat(field12),parseFloat(field13),parseFloat(field14),parseFloat(field15),parseFloat(field16),parseFloat(field18),parseFloat(field19), epw.diffuseHorizontalRadiation, epw.directNormalRadiation, epw);
 
-      console.log(result)
+      //console.log(result)
       var valuess = result.map(function(value,index) { return value.value; })
       var numberss = valuess.length/7
       var matrix = listToMatrix(valuess, numberss);
-      console.log(matrix) 
+      //console.log(matrix) 
 
       var data = [{
         z: matrix,
